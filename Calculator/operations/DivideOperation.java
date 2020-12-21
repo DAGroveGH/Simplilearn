@@ -1,8 +1,8 @@
 package Calculator.operations;
 
-public class AddOperation {
-    int num1 = 0;
-    int num2 = 0;
+public class DivideOperation {
+    double num1 = 0;
+    double num2 = 0;
 
     public void setNum1(int num1) {
         this.num1 = num1;
@@ -12,7 +12,7 @@ public class AddOperation {
         this.num2 = num2;
     }
 
-    public int calculate() {
-        return num1 + num2;
+    public double calculate() {
+        return num1 / num2;
     }
 }

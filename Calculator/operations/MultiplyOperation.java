@@ -1,6 +1,6 @@
 package Calculator.operations;
 
-public class AddOperation {
+public class MultiplyOperation {
     int num1 = 0;
     int num2 = 0;
 
@@ -13,6 +13,6 @@ public class AddOperation {
     }
 
     public int calculate() {
-        return num1 + num2;
+        return num1 * num2;
     }
 }
