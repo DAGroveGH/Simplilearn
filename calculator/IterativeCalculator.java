@@ -2,10 +2,10 @@ package calculator;
 
 import java.util.Scanner;
 
-import Calculator.operations.AddOperation;
-import Calculator.operations.DivideOperation;
-import Calculator.operations.MultiplyOperation;
-import Calculator.operations.SubtractOperation;
+import calculator.operations.AddOperation;
+import calculator.operations.DivideOperation;
+import calculator.operations.MultiplyOperation;
+import calculator.operations.SubtractOperation;
 
 public class IterativeCalculator {
 

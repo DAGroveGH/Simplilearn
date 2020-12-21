@@ -1,8 +1,8 @@
-package Calculator.operations;
+package calculator.operations;
 
 public class DivideOperation {
-    double num1 = 0;
-    double num2 = 0;
+    private double num1 = 0;
+    private double num2 = 0;
 
     public void setNum1(int num1) {
         this.num1 = num1;
