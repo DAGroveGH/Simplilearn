@@ -1,6 +1,11 @@
-package Calculator;
+package calculator;
 
 import java.util.Scanner;
+
+import Calculator.operations.AddOperation;
+import Calculator.operations.DivideOperation;
+import Calculator.operations.MultiplyOperation;
+import Calculator.operations.SubtractOperation;
 
 public class IterativeCalculator {
 
@@ -19,5 +24,39 @@ public class IterativeCalculator {
         System.out.println("3 - Multiplication");
         System.out.println("4 - Division");
         int operation = sc.nextInt();
+
+        sc.close();
+        switch(operation) {
+            case 1:
+                AddOperation add = new AddOperation();
+                add.setNum1(num1);
+                add.setNum2(num2);
+                System.out.println("Result:" + add.calculate());
+                break;
+            case 2:
+                SubtractOperation sub = new SubtractOperation();
+                sub.setNum1(num1);
+                sub.setNum2(num2);
+                System.out.println("Result: " + sub.calculate());
+                break;
+            case 3:
+                MultiplyOperation mult = new MultiplyOperation();
+                mult.setNum1(num1);
+                mult.setNum2(num2);
+                System.out.println("Result: " + mult.calculate());
+                break;
+            case 4:
+                DivideOperation div = new DivideOperation();
+
+                if(num2 == 0) {
+                    System.out.println("Illegal Operation");
+                    break;
+                }else{
+                    div.setNum1(num1);
+                    div.setNum2(num2);
+                    System.out.println("Result: " + div.calculate());
+                }
+                break;
+        }
     }
 }
