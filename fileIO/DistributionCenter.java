@@ -3,7 +3,7 @@ package fileIO;
 import java.util.List;
 import java.util.ArrayList;
 
-public class DistributionCenter {
+public abstract class DistributionCenter {
 
     List<Product> productOnHand = new ArrayList<Product>();
 

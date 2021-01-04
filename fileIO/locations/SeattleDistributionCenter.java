@@ -1,10 +1,14 @@
 package fileIO.locations;
 
 import fileIO.DistributionCenter;
-import practice.company.undeliverable.DeliveryUnavailableException;
+import fileIO.issues.DeliveryUnavailableException;
 
 public class SeattleDistributionCenter extends DistributionCenter {
     Delivery delivery = new Delivery();
+
+    public void shipProduct(Product product) throws DeliveryUnavailableException{
+        delivery.deliver(product);
+    }
 
     static class Delivery {
         boolean isLost = true;
