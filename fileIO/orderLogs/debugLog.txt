@@ -1,0 +1,8 @@
+[Mon Jan 04 14:34:56 EST 2021} ERROR -------- moving on --------
+[Mon Jan 04 14:34:56 EST 2021} ERROR Delivery not possible. Message: Your item has been delayed, we will update you as the situation changes
+[Mon Jan 04 14:34:56 EST 2021} ERROR -------- moving on --------
+[Mon Jan 04 14:34:56 EST 2021} ERROR -------- moving on --------
+[Mon Jan 04 14:34:56 EST 2021} ERROR Delivery not possible. Message: Your product has been misplaced. We will work to resolve this as soon as possible
+[Mon Jan 04 14:34:56 EST 2021} ERROR -------- moving on --------
+[Mon Jan 04 14:34:56 EST 2021} ERROR Delivery not possible. Message: Your product has been misplaced. We will work to resolve this as soon as possible
+[Mon Jan 04 14:34:56 EST 2021} ERROR -------- moving on --------

@@ -43,7 +43,7 @@ public class Company {
     }
 
     public void readFromFile() throws IOException, URISyntaxException {
-        File orderInputFile = new File("fileIO/orderLogs/orders.txt");
+        File orderInputFile = new File("fileIO/orderLogs/orders.csv");
         FileInputStream fileInputStream = new FileInputStream(orderInputFile);
         int r = 0;
         StringBuilder sb = new StringBuilder();
