@@ -1,2 +1,0 @@
-ENTRY Date:[Mon Jan 04 14:34:55 EST 2021] -- Order{processed=true, product='tv', closestLocation='newyork', size=50, price=400.0}
-ENTRY Date:[Mon Jan 04 14:34:56 EST 2021] -- Order{processed=true, product='headphones', closestLocation='newyork', size=100, price=150.0}
