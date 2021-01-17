@@ -14,12 +14,16 @@ import static java.lang.System.exit;
 
 public class App {
 
-    final static String PATH = "phaseOneEndProject/files/";
+    final static String PATH = "phaseOneEndProject/files/";                 //Universal file path for this directory
 
     public static void main(String[] args){
         printWelcome();
         printMain();
-    }
+    }                             //Call for Welcome and Main Menu
+
+//    =================================
+//    |        WELCOME SCREEN         |
+//    =================================
 
     public static void printWelcome() {
         String bar = "====================================================================================================\n";
@@ -39,6 +43,10 @@ public class App {
         System.out.println("        ---------------------------  Developed by: David Grove  ----------------------------\n");
         System.out.println(bar + "\n");
     }
+
+//    =================================
+//    |           MAIN MENU           |
+//    =================================
 
     public static void printMain() {
         System.out.println("\n--------HOME PAGE--------");
@@ -70,6 +78,10 @@ public class App {
         }
         printMain();
     }
+
+//    =================================
+//    |       FILE ACTION MENU        |
+//    =================================
 
     public static void printFileActions() throws IOException {
         System.out.println("\n------FILE ACTIONS------");
@@ -107,16 +119,20 @@ public class App {
         }catch(InputMismatchException | IOException e) {
             System.out.println("Unexpected input, please input a valid choice 1 through 4");
         }
-        printFileActions();
+        printFileActions();                         //Continues the program if exception is thrown
     }
+
+//    =================================
+//    |    PRINT SORTED FILE NAMES    |
+//    =================================
 
     public static void printFiles(){
         System.out.println("---------------------");
         System.out.println("Showing files in ascending order");
-        File[] files = new File(PATH).listFiles();
-        Set<String> sorted = new TreeSet<>();
+        File[] files = new File(PATH).listFiles();          //Pulls all file names from the files folder
+        Set<String> sorted = new TreeSet<>();               //Sorts as added to TreeSet
 
-        assert files != null;
+        assert files != null : "Files folder is empty! Please add files first";       //Makes sure that the files array is not empty
         for(File file: files) {
             if(!file.isFile()) {
                 continue;
@@ -127,27 +143,39 @@ public class App {
         System.out.println("---------------------");
     }
 
+//    =================================
+//    |         CREATES FILE          |
+//    =================================
+
     public static boolean addFile(String fileName) {
         boolean added = false;
-        Path filePath = Paths.get(PATH+fileName);
+        Path filePath = Paths.get(PATH+fileName);       //Creates file path
         if(!Files.exists(filePath)) {
             try{
                 File file = new File(String.valueOf(filePath));
-                if(file.createNewFile()) {
+                if(file.createNewFile()) {                   //Creates file
                     added = true;
                 }
             }catch(IOException e) {
-                System.out.println("File cannot be created. See console log");
+                System.out.println("File cannot be created. See console error log");
                 e.printStackTrace();
             }
         }
         return added;
     }
 
+//    =================================
+//    |         DELETES FILE          |
+//    =================================
+
     public static boolean deleteFile(String fileName) throws IOException {
         Path filePath = Paths.get(PATH + fileName);
         return Files.deleteIfExists(filePath);
     }
+
+//    =================================
+//    |        SEARCHES FILE          |
+//    =================================
 
     public static boolean searchFile(String fileName) {
         boolean found = false;
